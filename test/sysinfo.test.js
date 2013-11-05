@@ -14,5 +14,9 @@ describe('default sysinfo interface', function () {
     should.ok(true);
     sysinfo.platform().should.eql(os.platform());
   });
+
+  it('should_cpuusage_works_fine', function () {
+    sysinfo.cpuusage().should.eql(0)
+  });
 });
 
