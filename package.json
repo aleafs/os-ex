@@ -1,0 +1,38 @@
+{
+  "name": "sysinfo",
+  "description": "",
+  "keywords": [ "system", "infomation", "usage" ],
+  "version": "0.0.0",
+  "author": "Aleafs Zhang (zhangxc83@gmail.com)",
+  "repository": { 
+    "type": "git", 
+    "url": "git@github.com:aleafs/sysinfo.git"
+  },
+  "homepage": "https://github.com/aleafs/sysinfo",
+  "contributors": [
+  ],
+  "dependencies": {
+  },
+  "engines": {
+    "node": ">=0.8.14"
+  },
+  "devDependencies": {
+    "should"  : ">=0.6.3",
+    "mocha"   : ">=1.0.3",
+    "blanket": "*",
+    "coveralls" : "*",
+    "travis-cov": "*",
+    "jshint" : "*",
+    "mocha-lcov-reporter": "*"
+  },
+  "scripts": {
+    "main"  : "index.js",
+    "test"  : "make test",
+    "blanket": {
+      "pattern": ["/lib"]
+    },
+    "travis-cov": {
+      "threshold": 95
+    }
+  }
+}
