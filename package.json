@@ -29,7 +29,7 @@
     "main"  : "index.js",
     "test"  : "make test",
     "blanket": {
-      "pattern": ["/lib"]
+      "pattern": ["/sysinfo/lib"]
     },
     "travis-cov": {
       "threshold": 95
