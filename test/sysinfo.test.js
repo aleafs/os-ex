@@ -15,7 +15,12 @@ describe('default sysinfo interface', function () {
     mm.restore();
   });
 
-  it('should linux extend work fine', function () {
+  it('should darwin extend works fine', function () {
+    var _me = sysinfo.__extends.darwin;
+    _me.cputime().should.have.property('cpu');
+  });
+
+  it('should linux extend works fine', function () {
 
     var filecontent = {
       '/proc/10428/stat' : '10428 (java) S 1 10292 9206 0 -1 4202496 922248 0 0 0 31249 35076 0 0 25 0 70 0 7309523429 818688000 64160 18446744073709551615 1073741824 1073778376 140737189838160 18446744073709551615 270627010533 0 0 2 16800973 18446744073709551615 0 0 17 2 0 0 0\n',
