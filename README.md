@@ -1,9 +1,9 @@
-[![Build Status](https://secure.travis-ci.org/aleafs/cron.png?branch=master)](http://travis-ci.org/aleafs/cron)
-[![Coverage Status](https://coveralls.io/repos/aleafs/cron/badge.png)](https://coveralls.io/r/aleafs/cron)
+[![Build Status](https://secure.travis-ci.org/aleafs/sysinfo.png?branch=master)](http://travis-ci.org/aleafs/sysinfo)
+[![Coverage Status](https://coveralls.io/repos/aleafs/sysinfo/badge.png)](https://coveralls.io/r/aleafs/sysinfo)
 
 ## About
 
-`cron`
+`sysinfo`
 
 ## License
 
