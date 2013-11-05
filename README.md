@@ -1,9 +1,9 @@
-[![Build Status](https://secure.travis-ci.org/aleafs/sysinfo.png?branch=master)](http://travis-ci.org/aleafs/sysinfo)
-[![Coverage Status](https://coveralls.io/repos/aleafs/sysinfo/badge.png)](https://coveralls.io/r/aleafs/sysinfo)
+[![Build Status](https://secure.travis-ci.org/aleafs/os-ex.png?branch=master)](http://travis-ci.org/aleafs/os-ex)
+[![Coverage Status](https://coveralls.io/repos/aleafs/os-ex/badge.png)](https://coveralls.io/r/aleafs/os-ex)
 
 ## About
 
-`sysinfo`
+`os-ex`
 
 ## License
 

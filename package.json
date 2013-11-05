@@ -1,14 +1,14 @@
 {
-  "name": "sysinfo",
+  "name": "os-ex",
   "description": "",
   "keywords": [ "system", "infomation", "usage" ],
   "version": "0.0.1",
   "author": "Aleafs Zhang (zhangxc83@gmail.com)",
   "repository": { 
     "type": "git", 
-    "url": "git@github.com:aleafs/sysinfo.git"
+    "url": "git@github.com:aleafs/os-ex.git"
   },
-  "homepage": "https://github.com/aleafs/sysinfo",
+  "homepage": "https://github.com/aleafs/os-ex",
   "contributors": [
   ],
   "dependencies": {
@@ -30,7 +30,7 @@
     "main"  : "index.js",
     "test"  : "make test",
     "blanket": {
-      "pattern": ["/sysinfo/lib"]
+      "pattern": ["/os-ex/lib"]
     },
     "travis-cov": {
       "threshold": 95
