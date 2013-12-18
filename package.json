@@ -2,7 +2,7 @@
   "name": "os-ex",
   "description": "",
   "keywords": [ "system", "infomation", "usage" ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Aleafs Zhang (zhangxc83@gmail.com)",
   "repository": { 
     "type": "git", 
