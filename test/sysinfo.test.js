@@ -69,7 +69,6 @@ describe('default sysinfo interface', function () {
       'cstime' : 0,
       'vsize' : 818688000,
       'rss' : 64160,
-      'cpu' : 2,
     });
   });
 
