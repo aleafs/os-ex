@@ -4,11 +4,11 @@
   "keywords": [ "system", "infomation", "usage" ],
   "version": "0.0.2",
   "author": "Aleafs Zhang (zhangxc83@gmail.com)",
+  "homepage": "https://github.com/aleafs/os-ex",
   "repository": { 
     "type": "git", 
     "url": "git@github.com:aleafs/os-ex.git"
   },
-  "homepage": "https://github.com/aleafs/os-ex",
   "contributors": [
   ],
   "dependencies": {
@@ -17,23 +17,24 @@
     "node": ">=0.8.14"
   },
   "devDependencies": {
-    "should"  : ">=0.6.3",
-    "mocha"   : ">=1.0.3",
+    "mocha"  : ">=0.9.0",
+    "should" : ">=4.0.0",
     "mm" : "*",
     "blanket": "*",
     "coveralls" : "*",
     "travis-cov": "*",
-    "jshint" : "*",
     "mocha-lcov-reporter": "*"
   },
   "scripts": {
     "main"  : "index.js",
-    "test"  : "make test",
+    "test"  : "make test"
+  },
+  "config" : {
     "blanket": {
-      "pattern": ["/os-ex/lib"]
+      "pattern": "//^((?!(node_modules|test)).)*$/"
     },
     "travis-cov": {
-      "threshold": 95
+      "threshold": 90
     }
   }
 }
