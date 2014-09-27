@@ -64,6 +64,53 @@ describe('default sysinfo interface', function () {
       'vsize' : 818688000,
       'rss' : 64160,
     });
+
+    _me.netflowsize().should.eql({
+      'eth0' : {
+        'Receive' : {
+          'bytes' : 11210125716974,
+          'packets' : 51900851777,
+          'errs' : 0,
+          'drop' : 2032653,
+          'fifo' : 0,
+          'frame' : 0,
+          'compressed' : 0,
+          'multicast' : 6,
+        },
+        'Transmit' : {
+          'bytes' : 7183377475697,
+          'packets' : 7220239841,
+          'errs' : 0,
+          'drop' : 0,
+          'fifo' : 0,
+          'colls' : 0,
+          'carrier' : 0,
+          'compressed' : 0,
+        }
+      },
+      'lo' : {
+        "Receive": {
+          "bytes": 40780802359,
+          "compressed": 0,
+          "drop": 0,
+          "errs": 0,
+          "fifo": 0,
+          "frame": 0,
+          "multicast": 0,
+          "packets": 191777868,
+        },
+        "Transmit": {
+          "bytes": 40780802359,
+          "carrier": 0,
+          "colls": 0,
+          "compressed": 0,
+          "drop": 0,
+          "errs": 0,
+          "fifo": 0,
+          "packets": 191777868,
+        }
+      },
+    });
   });
   /* }}} */
 
