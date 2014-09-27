@@ -1,8 +1,8 @@
 {
   "name": "os-ex",
+  "version": "0.0.2",
   "description": "",
   "keywords": [ "system", "infomation", "usage" ],
-  "version": "0.0.2",
   "author": "Aleafs Zhang (zhangxc83@gmail.com)",
   "homepage": "https://github.com/aleafs/os-ex",
   "repository": { 
@@ -26,15 +26,15 @@
     "mocha-lcov-reporter": "*"
   },
   "scripts": {
-    "main"  : "index.js",
-    "test"  : "make test"
+    "main" : "index.js",
+    "test" : "make test"
   },
   "config" : {
     "blanket": {
       "pattern": "//^((?!(node_modules|test)).)*$/"
     },
     "travis-cov": {
-      "threshold": 90
+      "threshold": 70
     }
   }
 }
