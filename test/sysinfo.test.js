@@ -22,21 +22,15 @@ describe('default sysinfo interface', function () {
   });
   /* }}} */
 
+  /* {{{ should linux extend works fine() */
   it('should linux extend works fine', function () {
 
-    var filecontent = {
-      '/proc/10428/stat' : '10428 (java) S 1 10292 9206 0 -1 4202496 922248 0 0 0 31249 35076 0 0 25 0 70 0 7309523429 818688000 64160 18446744073709551615 1073741824 1073778376 140737189838160 18446744073709551615 270627010533 0 0 2 16800973 18446744073709551615 0 0 17 2 0 0 0\n',
-      '/proc/stat' : ['cpu  42314893 11732760 24846625 31935243338 85487979 494667 5966039 0',
-      'cpu0 4262755 515169 3321273 8060525027 33664462 22579 670120 0',
-      'btime 1300938465'].join('\n'),
-    };
+    var _readFileSync = fs.readFileSync;
+    mm(fs, 'readFileSync', function () {
+      var x = arguments;
+      x[0] = __dirname + '/data/' + x[0];
 
-    mm(fs, 'readFileSync', function (x) {
-      if (x in filecontent) {
-        return filecontent[x];
-      }
-
-      throw new Error("ENOENT, no such file or directory '" + x + "'");
+      return _readFileSync.apply(null, x);
     });
 
     var _me = sysinfo.__extends.linux;
@@ -71,9 +65,13 @@ describe('default sysinfo interface', function () {
       'rss' : 64160,
     });
   });
+  /* }}} */
 
+  /* {{{ should_cpuusage_works_fine() */
   it('should_cpuusage_works_fine', function () {
     sysinfo.cpuusage().should.eql(0)
   });
+  /* }}} */
+
 });
 
