@@ -11,7 +11,7 @@ var sysinfo = require(__dirname + '/../');
 
 describe('default sysinfo interface', function () {
 
-  beforeEach(function () {
+  afterEach(function () {
     mm.restore();
   });
 
@@ -19,6 +19,12 @@ describe('default sysinfo interface', function () {
   it('should darwin extend works fine', function () {
     var _me = sysinfo.__extends.darwin;
     _me.cputime().should.have.property('cpu');
+  });
+  /* }}} */
+
+  /* {{{ should_cpuusage_works_fine() */
+  it('should_cpuusage_works_fine', function () {
+    sysinfo.cpuusage().should.eql(0)
   });
   /* }}} */
 
@@ -67,56 +73,26 @@ describe('default sysinfo interface', function () {
 
     _me.netflowsize().should.eql({
       'eth0' : {
-        'Receive' : {
-          'bytes' : 11210125716974,
-          'packets' : 51900851777,
-          'errs' : 0,
-          'drop' : 2032653,
-          'fifo' : 0,
-          'frame' : 0,
-          'compressed' : 0,
-          'multicast' : 6,
-        },
-        'Transmit' : {
-          'bytes' : 7183377475697,
-          'packets' : 7220239841,
-          'errs' : 0,
-          'drop' : 0,
-          'fifo' : 0,
-          'colls' : 0,
-          'carrier' : 0,
-          'compressed' : 0,
-        }
+        'bytin' : 11210125716974,
+        'pktin' : 51900851777,
+        'bytout' : 7183377475697,
+        'pktout' : 7220239841,
       },
       'lo' : {
-        "Receive": {
-          "bytes": 40780802359,
-          "compressed": 0,
-          "drop": 0,
-          "errs": 0,
-          "fifo": 0,
-          "frame": 0,
-          "multicast": 0,
-          "packets": 191777868,
-        },
-        "Transmit": {
-          "bytes": 40780802359,
-          "carrier": 0,
-          "colls": 0,
-          "compressed": 0,
-          "drop": 0,
-          "errs": 0,
-          "fifo": 0,
-          "packets": 191777868,
-        }
+        'bytin' : 40780802359,
+        'pktin' : 191777868,
+        'bytout' : 40780802359,
+        'pktout' : 191777868,
       },
     });
-  });
-  /* }}} */
 
-  /* {{{ should_cpuusage_works_fine() */
-  it('should_cpuusage_works_fine', function () {
-    sysinfo.cpuusage().should.eql(0)
+    _me.meminfo().should.eql({
+      'buffers' : 1048301568,
+      'cached'  : 10726449152,
+      'free'    : 2440630272,
+      'total'   : 16834637824,
+      'used'    : 2619256832,
+    });
   });
   /* }}} */
 
